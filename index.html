@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de usuarios GitHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="search-panel">
+        <p class="eyebrow">GitHub Explorer</p>
+        <h1>Busca un perfil</h1>
+
+        <form id="searchForm" novalidate>
+          <label class="sr-only" for="usernameInput">Nombre de usuario</label>
+          <div class="input-row">
+            <input
+              id="usernameInput"
+              name="username"
+              type="text"
+              placeholder="Ej: microsoft, octocat, torvalds"
+              autocomplete="off"
+              aria-describedby="formError"
+            />
+            <button id="searchButton" type="submit">Buscar</button>
+          </div>
+          <p id="formError" class="form-error" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="status" class="status hidden" aria-live="polite"></section>
+      <section id="result" class="result" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
